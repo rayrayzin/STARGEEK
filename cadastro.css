@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 500px 100px;
+    grid-template-areas: 
+    "h h"
+    "m f"
+    "r r";
+}
+
+.botao1{
+    color: black;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    grid-area: h;
+    background-color: #7817FD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+header > img {
+    height: 80px;
+}
+
+header > a{
+    background-color: #C883FF;
+    font-size: 2rem;
+    border-radius: 50px;
+    padding: 10px 30px;
+}
+
+main {
+    grid-area: m;
+    background-color: #C883FF;
+    border-radius: 15px;
+}
+
+main > img {
+    width: 100%;
+    height: 1270px;
+}
+
+section {
+    grid-area: f;
+    background-color: rgb(255, 251, 247);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form > label{
+    margin: 10px 0;
+}
+
+form > input  {
+    font-size: 2rem;
+    background-color: #C883FF;
+    color: brown;
+    border-radius: 50px;
+    border: none;
+    height: 5vw;
+    width: 100%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+form > input:focus{
+    background-color: blue;
+}
+
+form > label{
+    font-size: 2rem;
+}
+
+input[type="submit"]{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+input[type="submit"]:hover{
+    background-color: blue;
+    color: white;
+}
+
+.caixa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30vw;
+    padding: 40px;
+    border-radius: 20px;
+    padding-left: 40px;
+    width: 40vw;
+}
+p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: 0.4rem;
+}
+
+.btnlog{
+    display: flex;
+    flex-direction: row;
+}
+
+.btnlog p{
+    font-size: 2em;
+    margin-right: 1vw;
+}
+
+.btnlog a{
+    font-size: 2em;
+}

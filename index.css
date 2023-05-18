@@ -1,0 +1,143 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 940px 10vw auto;
+    grid-template-areas: 
+    "c"
+    "p"
+    "b"
+    "r";
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(159, 62, 255);
+}
+header{
+    grid-area: c;
+    display: flex;
+    border-bottom: 3px solid rgb(175, 28, 208);
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+#divBusca{
+    background-color:#2F4F4F;
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+  
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+}
+
+.hdireita > span{
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-left: 16px;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+   width: 33%;
+}
+
+.logo img{
+    height: 100px;
+    
+}
+
+.user{
+
+}
+
+.propaganda{
+    grid-area: p;
+    background-image: url(imgs/propaganda2.jpg);
+    background-size: 100%;
+}
+
+
+.lead {
+    grid-area: b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(imgs/starbg.png);
+    background-color: blue;
+}
+
+.btn-01{
+    padding: 10px 40px;
+    border-radius: 15px;
+    margin-left: 16px;
+    font-weight: 600;
+    font-size: 2rem;
+    background-color:#C1FF44;
+    color: white;
+   text-align: center;
+  
+}
+
+.btn-01:hover{
+    transform: scale(0.8);
+    transition: 0.5s;
+    box-shadow: rgba(196, 204, 40, 0.502) 4px 4px 8px; 
+}
+footer{
+    grid-area: r;
+    background-color: #C1FF44;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 10px;
+    
+}
+.social{
+ display: flex;
+ 
+}
+.social img{
+    height: 90px;
+    
+}
+.sdestaque{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+footer > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    flex-direction: column;
+}
+
+

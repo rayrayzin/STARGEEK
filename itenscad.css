@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.conteiner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100vw 100px;
+    grid-template-areas: 
+    "h h"
+    "m m"
+    "r r";
+}
+
+header{
+    grid-area: h;
+    background-color: #7817FD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+main{
+    grid-area: m;
+    background-color: #f9f0f0;
+    background-image: url(imgs/starbg.png);
+}
+
+.cards{
+    margin-top: 3vw;
+    margin-left: 5vw;
+    width: 90vw;
+    height: 20vw;
+    background-color: #9e62ec;
+    padding-top: 2vw;
+}
+
+.card{
+    margin-left: 2vw;
+}
+
+.cardimg{
+    width: 20vw;
+    height: 10vw;
+    background-color: #b58bec;
+}
+
+.cardinfo{
+    width: 20vw;
+    height: 6vw;
+    background-color: black;
+    text-align: center;
+    
+}
