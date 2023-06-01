@@ -5,6 +5,9 @@ const nome = document.getElementById("nome");
 const descricao = document.getElementById("descricao");
 const foto = document.getElementById("foto");
 
+var emaillogado;
+verificaLog();
+
 
 carregarCatalogo();
 function carregarCatalogo(){
@@ -19,9 +22,9 @@ function carregarCatalogo(){
     dados.forEach((elemento, indice) => {
         let divcard = document.createElement("div");
         divcard.setAttribute("class", "card")
-        divcard.innerHTML = `<img src="img/${elemento.foto}"> 
-        <div class="nome">${elemento.nome}</div>
-        <div class="info"><a onclick="editar(${indice})">editar</a>
+        divcard.innerHTML = ` <div class="cardimg"><img src="img/${elemento.foto}"> </div>
+        ${elemento.nome}
+        <div class="cardinfo"><a onclick="editar(${indice})">editar</a>
         <a onclick="excluir(${indice})">excluir</a></div>
         </div>`;
         
@@ -42,10 +45,19 @@ function excluir(indice){
 }
 
 function editar(indice){
-    var url ="cadastro.html?peditar=true&indice="+ encodeURIComponent(indice);
+    var url ="caditem.html?peditar=true&indice="+ encodeURIComponent(indice);
     window.location.href = url;
 }
 
 botaomodal.onclick = () =>{
     window.location.assign("cadastro.html");
+}
+
+function verificaLog(){
+    let logado = sessionStorage.getItem("logado");
+    if (logado != null) {
+        emaillogado = logado;
+    } else {
+        window.location.assign("login.html");
+    }
 }

@@ -5,21 +5,28 @@ const senha = document.getElementById("senha");
 
 formulario.onsubmit = (evt)=>{
     let dados = JSON.parse(localStorage.getItem("bd"));
+    if (dados != null) {
     let logado;
     dados.forEach((elemento) => {
         if(elemento.emailcliente == email.value && elemento.senhacliente == senha.value){
-            msg.innerHTML = "Aguarde redirecionando..."
+            msg.innerHTML = "Aguarde redirecionando...";
+            sessionStorage.setItem("logado", email.value)
             setTimeout(()=>{
-                window.location.assign("cat.html");
+                window.location.assign("itenscad.html");
             }, 2000);
             evt.preventDefault();
             logado = "ok";
             return true;
-        }
-        if (logado!="ok") {
-            msg.innerHTML = "Usuario ou senha incorretos"
-            evt.preventDefault()
-            return null;
-        }
-    });
+    }}); 
+
+    if (logado!="ok") {
+        msg.innerHTML = "Usuario ou senha incorretos"
+        evt.preventDefault()
+        return null;
+    }
+
+} else {
+    alert("Nenhum Usuário Cadastrado!")
+}
+   
 }

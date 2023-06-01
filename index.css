@@ -36,6 +36,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center; 
+    
 }
   
 #txtBusca{
@@ -77,6 +78,7 @@ a{
     grid-area: p;
     background-image: url(imgs/propaganda2.jpg);
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 

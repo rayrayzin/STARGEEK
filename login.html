@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=], initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
 </head>
@@ -13,10 +13,13 @@
         <main>
             
             <img src="imgs/loguinho.png" alt="">
+            <div class="mensagem"></div>
 
-            <form action="itenscad.html">
-                <input type="text" placeholder="      Logar com e-mail/ nome de usuário:">
-                <input type="password" placeholder="      Insira sua senha:">
+            <form id="formulario">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha">
                 <input type="submit" value="Login">
             </form>
 
@@ -25,8 +28,8 @@
             <p class="bvdestaque">Bem Vindo de volta!!</p>
 
         </main>
-        
-    </div>
+        </div>
+ <script src="login.js"></script>  
 </body>
-<script src="login.js"></script>
+
 </html>
