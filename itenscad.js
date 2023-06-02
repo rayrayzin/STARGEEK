@@ -61,3 +61,35 @@ function verificaLog(){
         window.location.assign("login.html");
     }
 }
+
+function get_container_width($addr)
+{
+        $tallest = 16.0 / 9.0;
+
+        $container_width = 100;
+
+        if ($addr[0] == '/') {
+                $addr = $_SERVER["DOCUMENT_ROOT"] . $addr;
+        }
+
+        list($width, $height) = getimagesize($addr);
+        if ($width > 0 && $height > 0) {
+                $prop = $width / $height;
+                if ($prop < $tallest) {
+                        $container_width *= $prop / $tallest;
+                }
+        }
+
+        return $container_width;
+}
+
+    $container_width = get_container_width($addr);
+
+    echo("<div id='$name' class=cartimg>");
+    echo("<div id='hdiv_$name' style='width: $container_width%;' class=cartimg2>\n");
+    echo("<a href='$addr' class=noarrow>\n");
+    echo("<img src='$addr' alt='$desc'>\n");
+    echo("</a>\n");
+    echo("</div>");
+    echo("<i>$desc</i>\n");
+    echo("</div>");

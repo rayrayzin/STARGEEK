@@ -137,3 +137,24 @@ form{
 .btneditar{
   display: block;
 }
+
+#body div.cartimg {
+    margin: auto;
+    width: 55%;
+    text-align: center;
+}
+
+#body div.cartimg div.cartimg2 {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: none;
+}
+
+#body div.cartimg img {
+    width: 100%;
+    margin-left: 0em;
+    margin-top: 0em;
+    margin-right: 0em;
+    margin-bottom: 0em;
+}
